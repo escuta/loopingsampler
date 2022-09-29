@@ -1,4 +1,4 @@
-#N canvas 113 59 945 679 12;
+#N canvas 284 56 945 704 12;
 #X text 40 -50 1) Inicialmente \, use a interruptor "RECORD" para gravar
 um loop que servirá como base para sobreposições subsequentes. O
 comprimento do loop é determinado pelo tempo expirado quando a interruptor
@@ -45,12 +45,6 @@ ocorrerá no final do ciclo anterior.;
 #X text 470 99 6) O painel amarelo tem controles para gravar a corrente
 de áudio para um arquivo. Não se esqueça "PARAR DE GRAVAR" quando
 terminar!;
-#X text 470 164 7) A abstração "tables" (painel salmão) requer o
-argumento de tempo de loop em amostras (ex. se o taxa de amostragem
-está 48kHz \, o valor de 480000 representa 10 segundos). Isso define
-a duração máxima dos loops. Observe que se o botão "LOAD" ou "RESTORE"
-foram usados para carregar arquivos amostras de tamanho maior \, a
-memória para todos os loops será redimensionada de acordo.;
 #X text 470 290 8) O projeto pode ser salvo ou restaurado usando o
 painel "DADOS DO PROJETO" em cinza escuro. O caminho e o nome do projeto
 \, por exemplo. /tmp/teste \, deve ser inserido manualmente como um
@@ -59,4 +53,11 @@ como dois arquivos no diretório especificado no caminho: um arquivo
 wav multicanal para armazenar os "arrays" de áudio e um arquivo de
 texto para armazenar as durações dos loops. Se o projeto se chama
 teste \, por exemplo \, os arquivos salvos são test.wav e test.txt.
+;
+#X text 470 164 7) A abstração "tables" (painel salmão) requer o
+argumento de tempo de loop em amostras (ex. se o taxa de amostragem
+está 48kHz \, o valor de 480000 representa 10 segundos). Isso define
+a duração máxima dos loops. Observe que se o botão "CARREGAR" ou
+"RESGATAR" foram usados para carregar arquivos amostras de tamanho
+maior \, a memória para todos os loops será redimensionada de acordo.
 ;
