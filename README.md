@@ -1,0 +1,1 @@
+Puredata looping sampler patch. Master patch is loopingsampler.pd.
