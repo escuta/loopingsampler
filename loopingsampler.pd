@@ -1,7 +1,7 @@
-#N canvas 308 89 658 589 10;
+#N canvas 318 91 658 589 10;
 #X obj 213 69 cnv 15 182 375 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 214 455 cnv 15 179 92 empty empty PROJECT\ DATA 19 12 0 10 #6e6b6b
+#X obj 214 455 cnv 15 179 92 empty empty PROJECT\ DATA 19 12 0 10 #888181
 #000000 0;
 #X obj 401 490 cnv 15 245 57 empty empty empty 20 12 0 14 #a75cac #404040
 0;
@@ -9,7 +9,7 @@
 0;
 #X obj 402 406 cnv 15 246 70 empty empty LOOP\ MEMORY\ IN\ SAMPLES
 20 9 0 10 #f66943 #000000 0;
-#X obj 0 246 cnv 15 206 154 empty empty MONO\ INPUT\ PANNING 5 16 0
+#X obj 0 246 cnv 15 206 154 empty inpan MONO\ INPUT\ PANNING 5 16 0
 10 #97c1e7 #000000 0;
 #X obj 0 10 cnv 15 207 229 empty empty empty 20 12 0 10 #e8d4e4 #404040
 0;
@@ -72,7 +72,7 @@
 #X connect 17 0 9 0;
 #X connect 17 0 6 0;
 #X restore 14 67 pd inputmodule;
-#X obj 14 31 hsl 128 15 0 10 0 1 empty empty INPUT\ GAIN 0 -8 0 10
+#X obj 14 31 hsl 128 15 0 10 0 1 empty infade INPUT\ GAIN 0 -8 0 10
 #fcfcfc #000000 #000000 7850 1;
 #X obj 14 97 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
 #N canvas 224 246 1057 732 sampler 0;
@@ -503,7 +503,7 @@
 #X obj 17 437 hradio 15 0 0 10 store empty STORE\ SNAPSHOT 0 -8 0 10
 #d52424 #000000 #000000 0;
 #X obj 18 484 hradio 15 0 0 10 recall empty RECALL\ SNAPSHOT 0 -8 0
-10 #39d61b #000000 #000000 3;
+10 #39d61b #000000 #000000 0;
 #N canvas 0 0 450 300 CLEAR_LOOP 0;
 #X msg 80 70 \; sampler_L const 0 \; sampler_R const 0;
 #X obj 80 20 inlet;
@@ -632,13 +632,63 @@ a text file to store the loop durations. If the project is named test
 #X obj 10 375 tgl 15 1 randomiseout randomisein randomise 17 7 0 10
 #fcfcfc #000000 #000000 1 1;
 #X obj 110 380 hsl 85 14 -45 45 0 1 manualpan empty MANUAL\ PAN 8 -8
-0 10 #fcfcfc #000000 #000000 3600 1;
-#X text 135 343 OR;
-#X obj 112 176 tgl 15 1 stereo empty STEREO\ INPUT 17 7 0 10 #fcfcfc
+0 10 #fcfcfc #000000 #000000 3700 1;
+#X obj 112 176 tgl 15 1 stereo ster STEREO\ INPUT 17 7 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 60 97 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
 #X text 77 301 % random stereo;
 #X text 76 314 overlay separation;
+#X obj 230 370 bng 15 250 50 0 en empty English 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 300 250 print;
+#N canvas 872 177 781 335 language 1;
+#X obj 20 75 l2s;
+#X msg 150 40 GANHO DE ENTRADA;
+#X msg 20 40 INPUT GAIN;
+#X obj 27 4 r en;
+#X obj 140 10 r pt;
+#X msg 20 100 \; infade label \$1;
+#X obj 50 225 l2s;
+#X obj 57 154 r en;
+#X obj 170 160 r pt;
+#X msg 50 190 STEREO INPUT;
+#X msg 150 190 ENTRADA ESTEREO;
+#X msg 50 250 \; ster label \$1;
+#X obj 20 365 l2s;
+#X obj 27 294 r en;
+#X obj 140 300 r pt;
+#X msg 20 330 MONO INPUT PANNING;
+#X msg 140 330 BALANÇA DE ENTRADA MONOFÔNICA;
+#X msg 20 390 \; inpan label \$1;
+#X msg 190 440 \; randomisein label \$1;
+#X obj 160 425 l2s;
+#X obj 167 354 r en;
+#X obj 280 360 r pt;
+#X msg 160 390 randomise;
+#X msg 280 390 randomizar;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 6 0 11 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 0;
+#X connect 19 0 18 0;
+#X connect 20 0 22 0;
+#X connect 21 0 23 0;
+#X connect 22 0 19 0;
+#X connect 23 0 19 0;
+#X restore 240 410 pd language;
+#X obj 300 370 bng 15 250 50 0 pt empty Português 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X connect 10 0 23 2;
 #X connect 11 0 23 6;
 #X connect 12 0 23 5;
@@ -650,7 +700,7 @@ a text file to store the loop durations. If the project is named test
 #X connect 18 0 25 2;
 #X connect 19 0 18 0;
 #X connect 20 0 22 0;
-#X connect 20 1 70 0;
+#X connect 20 1 69 0;
 #X connect 20 2 23 0;
 #X connect 20 3 23 1;
 #X connect 21 0 20 0;
