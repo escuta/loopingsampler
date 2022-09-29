@@ -1,18 +1,18 @@
-#N canvas 285 75 658 650 10;
+#N canvas 295 77 658 650 10;
 #X obj 470 2 cnv 15 170 60 empty empty empty 20 12 0 14 #fa77ed #404040
 0;
 #X obj 227 157 cnv 15 162 348 empty empty empty 20 12 0 14 #e0e0e0
 #404040 0;
-#X obj 227 511 cnv 15 161 93 empty grey DADOS\ DO\ PROJETO 19 12 0
-10 #888181 #000000 0;
+#X obj 227 511 cnv 15 161 93 empty grey PROJECT\ DATA 19 12 0 10 #888181
+#000000 0;
 #X obj 395 546 cnv 15 245 57 empty empty empty 20 12 0 14 #ff4905 #404040
 0;
 #X obj -6 469 cnv 15 226 135 empty empty empty 17 16 0 10 #93ee2f #404040
 0;
-#X obj 396 462 cnv 15 246 70 empty tables MEMÒRIA\ DE\ LOOP\ EM\ AMOSTRAS
+#X obj 396 462 cnv 15 246 70 empty tables LOOP\ MEMORY\ IN\ SAMPLES
 20 9 0 10 #f66943 #000000 0;
-#X obj -6 302 cnv 15 225 154 empty inpan BALANÇO\ DE\ ENTRADA\ MONO
-5 16 0 10 #97c1e7 #000000 0;
+#X obj -6 302 cnv 15 225 154 empty inpan MONO\ INPUT\ PANNING 5 16
+0 10 #97c1e7 #000000 0;
 #X obj -6 66 cnv 15 226 229 empty empty empty 20 12 0 10 #e8d4e4 #404040
 0;
 #X obj 227 66 cnv 15 163 84 empty empty empty 20 12 0 14 #80ffff #404040
@@ -21,19 +21,19 @@
 #404040 0;
 #X obj 397 66 cnv 15 246 200 empty empty empty 20 12 0 14 #80ff80 #404040
 0;
-#X obj 236 76 tgl 15 0 empty rec GRAVAR 20 7 0 10 #fcfcfc #000000 #000000
+#X obj 236 76 tgl 15 0 empty rec RECORD 20 7 0 10 #fcfcfc #000000 #000000
 0 1;
-#X obj 415 106 bng 15 250 50 0 empty replay REINICIAR\ LOOPING 25 7
-0 10 #fcfcfc #000000 #000000;
+#X obj 415 106 bng 15 250 50 0 empty replay REPLAY\ LOOPS 25 7 0 10
+#fcfcfc #000000 #000000;
 #X msg 414 73 0;
 #X obj 417 226 hsl 128 15 0 1 0 1 empty vol VOLUME -2 -8 0 10 #fcfcfc
 #000000 #000000 9650 1;
-#X obj 316 126 tgl 15 0 empty overlay SOBREPOR 17 7 0 10 #fcfcfc #000000
+#X obj 316 126 tgl 15 0 empty overlay OVERLAY 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X msg 421 373 start;
 #X msg 419 403 stop;
-#X obj 421 293 bng 15 250 50 0 empty create CREAR\ ARQUIVO\ DE\ SOM
-21 7 0 10 #fcfcfc #000000 #000000;
+#X obj 421 293 bng 15 250 50 0 empty create CREATE\ SOUND\ FILE 21
+7 0 10 #fcfcfc #000000 #000000;
 #X msg 421 343 open \$1;
 #X obj 421 323 savepanel;
 #N canvas 765 220 450 425 inputmodule 0;
@@ -74,8 +74,8 @@
 #X connect 17 0 9 0;
 #X connect 17 0 6 0;
 #X restore 8 123 pd inputmodule;
-#X obj 8 87 hsl 128 15 0 10 0 1 empty infade GANHO\ DE\ ENTRADA 0 -8
-0 10 #fcfcfc #000000 #000000 7850 1;
+#X obj 8 87 hsl 128 15 0 10 0 1 empty infade INPUT\ GAIN 0 -8 0 10
+#fcfcfc #000000 #000000 7850 1;
 #X obj 8 160 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
 #N canvas 224 246 1057 732 sampler 0;
 #X obj 564 189 sel 1 0;
@@ -486,8 +486,8 @@
 #X connect 94 1 83 0;
 #X connect 95 0 94 1;
 #X restore 240 300 pd sampler;
-#X obj 240 367 bng 15 250 50 0 empty cycle início\ do\ ciclo 20 4
-0 10 #fcfcfc #000000 #000000;
+#X obj 240 367 bng 15 250 50 0 empty cycle cycle\ start 20 4 0 10 #fcfcfc
+#000000 #000000;
 #N canvas 827 127 450 325 diskrecord 0;
 #X obj 93 125 writesf~ 2;
 #X obj 20 40 inlet~;
@@ -501,13 +501,13 @@
 #X msg -2 363 100;
 #X obj -3 388 s pan;
 #X floatatom 24 363 5 0 0 0 - - -, f 5;
-#X obj 11 493 hradio 15 0 0 10 store snapin SALVAR\ SNAPSHOT 0 -8 0
+#X obj 11 493 hradio 15 0 0 10 store snapin STORE\ SNAPSHOT 0 -8 0
 10 #d52424 #000000 #000000 0;
-#X obj 12 540 hradio 15 0 0 10 recall snapout LEMBRAR\ SNAPSHOT 0 -8
+#X obj 12 540 hradio 15 0 0 10 recall snapout RECALL\ SNAPSHOT 0 -8
 0 10 #39d61b #000000 #000000 0;
-#X obj 416 151 bng 15 250 50 0 empty clearloop APAGAR\ LOOP 17 7 0
-10 #fcfcfc #000000 #000000;
-#X obj 511 152 bng 15 250 50 0 empty clearsnapshots APAGAR\ SNAPSHOTS
+#X obj 416 151 bng 15 250 50 0 empty clearloop CLEAR\ LOOP 17 7 0 10
+#fcfcfc #000000 #000000;
+#X obj 511 152 bng 15 250 50 0 empty clearsnapshots CLEAR\ SNAPSHOTS
 17 7 0 10 #fcfcfc #000000 #000000;
 #X text 14 509 1;
 #X text 29 509 2;
@@ -529,21 +529,21 @@
 #X text 120 557 8;
 #X text 134 557 9;
 #X text 146 557 10;
-#X obj 232 546 bng 15 250 50 0 empty save RESGATAR 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 313 546 bng 15 250 50 0 empty restore SALVAR 17 7 0 10 #fcfcfc
+#X obj 232 546 bng 15 250 50 0 empty save SAVE 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 313 546 bng 15 250 50 0 empty restore RESTORE 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 12 574 tgl 15 1 wait empty wait 17 7 0 10 #fcfcfc #000000 #000000
 1 1;
-#X obj 275 102 bng 15 250 50 0 empty load CARREGAR 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 275 102 bng 15 250 50 0 empty load LOAD 17 7 0 10 #fcfcfc #000000
+#000000;
 #X obj 426 489 tables 480000;
 #X obj 230 573 dataStore /tmp/test;
-#X obj 4 431 tgl 15 1 randomiseout randomisein randomizar 17 7 0 10
+#X obj 4 431 tgl 15 1 randomiseout randomisein randomise 17 7 0 10
 #fcfcfc #000000 #000000 1 1;
-#X obj 104 436 hsl 85 14 -45 45 0 1 manualpan manpan BALANÇO\ MANUAL
-0 -8 0 10 #fcfcfc #000000 #000000 3700 1;
-#X obj 106 270 tgl 15 1 stereo ster ENTRADA\ ESTEREO 17 7 0 10 #fcfcfc
+#X obj 104 436 hsl 85 14 -45 45 0 1 manualpan manpan MANUAL\ PAN 0
+-8 0 10 #fcfcfc #000000 #000000 3700 1;
+#X obj 106 270 tgl 15 1 stereo ster STEREO\ INPUT 17 7 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 54 160 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
 ;
@@ -847,11 +847,11 @@
 #X restore 490 40 pd language;
 #X obj 560 13 bng 15 250 50 0 empty empty Português 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 37 384 cnv 15 143 25 empty percent1 %\ separação\ estereofônica
-3 7 0 10 #97c1e7 #404040 0;
-#X obj 50 404 cnv 15 98 9 empty percent2 aleatória -10 -1 0 10 #97c1e7
+#X obj 37 384 cnv 15 143 25 empty percent1 %\ random\ stereo 3 7 0
+10 #97c1e7 #404040 0;
+#X obj 50 404 cnv 15 98 9 empty percent2 separation -10 -1 0 10 #97c1e7
 #404040 0;
-#X obj 459 80 cnv 15 98 9 empty stop PARAR\ LOOPING -10 -1 0 10 #80ff80
+#X obj 459 80 cnv 15 98 9 empty stop STOP\ LOOPS -10 -1 0 10 #80ff80
 #000000 0;
 #N canvas 0 0 450 300 messages 0;
 #X msg 80 70 \; sampler_L const 0 \; sampler_R const 0;
@@ -890,10 +890,10 @@ snapL3 const 0 \; snapL4 const 0 \; snapL5 const 0 \; snapL6 const
 #X connect 2 0 11 0;
 #X connect 2 0 12 0;
 #X restore 511 173 pd messages;
-#X obj 472 381 cnv 15 98 9 empty rec2disk GRAVAR\ AO\ HD -10 -1 0 10
-#faff00 #000000 0;
-#X obj 472 410 cnv 15 98 9 empty stoprec PARAR\ DE\ GRAVAR -10 -1 0
+#X obj 472 381 cnv 15 98 9 empty rec2disk RECORD\ TO\ DISK -10 -1 0
 10 #faff00 #000000 0;
+#X obj 472 410 cnv 15 98 9 empty stoprec STOP\ RECORDING -10 -1 0 10
+#faff00 #000000 0;
 #X obj 470 567 HELP;
 #X obj 517 567 AJUDA;
 #X connect 11 0 24 2;
