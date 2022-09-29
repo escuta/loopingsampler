@@ -1,4 +1,4 @@
-#N canvas 139 88 658 650 10;
+#N canvas 285 75 658 650 10;
 #X obj 470 2 cnv 15 170 60 empty empty empty 20 12 0 14 #fa77ed #404040
 0;
 #X obj 227 157 cnv 15 162 348 empty empty empty 20 12 0 14 #e0e0e0
@@ -76,7 +76,7 @@
 #X restore 8 123 pd inputmodule;
 #X obj 8 87 hsl 128 15 0 10 0 1 empty infade GANHO\ DE\ ENTRADA 0 -8
 0 10 #fcfcfc #000000 #000000 7850 1;
-#X obj 8 153 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
+#X obj 8 160 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
 #N canvas 224 246 1057 732 sampler 0;
 #X obj 564 189 sel 1 0;
 #X obj 530 230 timer;
@@ -504,7 +504,7 @@
 #X obj 11 493 hradio 15 0 0 10 store snapin SALVAR\ SNAPSHOT 0 -8 0
 10 #d52424 #000000 #000000 0;
 #X obj 12 540 hradio 15 0 0 10 recall snapout LEMBRAR\ SNAPSHOT 0 -8
-0 10 #39d61b #000000 #000000 3;
+0 10 #39d61b #000000 #000000 0;
 #X obj 416 151 bng 15 250 50 0 empty clearloop APAGAR\ LOOP 17 7 0
 10 #fcfcfc #000000 #000000;
 #X obj 511 152 bng 15 250 50 0 empty clearsnapshots APAGAR\ SNAPSHOTS
@@ -543,9 +543,9 @@
 #fcfcfc #000000 #000000 1 1;
 #X obj 104 436 hsl 85 14 -45 45 0 1 manualpan manpan BALANÇO\ MANUAL
 0 -8 0 10 #fcfcfc #000000 #000000 3700 1;
-#X obj 106 232 tgl 15 1 stereo ster ENTRADA\ ESTEREO 17 7 0 10 #fcfcfc
+#X obj 106 270 tgl 15 1 stereo ster ENTRADA\ ESTEREO 17 7 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 54 153 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
+#X obj 54 160 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
 ;
 #X obj 490 13 bng 15 250 50 0 empty empty English 17 7 0 10 #fcfcfc
 #000000 #000000;
