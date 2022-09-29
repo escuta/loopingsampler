@@ -1,0 +1,51 @@
+#N canvas 93 57 945 570 12;
+#X text 440 -165 4) "STOP" and "REPLAY" stop and restart looping. The
+same panel contains a "VOLUME" control for playback volume as well
+as buttons to "CLEAR LOOP" and "CLEAR SNAPSHOTS" (see below).;
+#X text 440 -91 5) Snapshots of current loop may be taken with "STORE
+SNAPSHOT" and recalled with "RECALL SNAPSHOT". When the "WAIT" toggle
+is selected \, recall of a snapshot will occur at the end of the prior
+cycle.;
+#X text 440 -16 6) Yellow panel has controls to stream audio to file.
+Don't forget to "STOP RECORDING" when done!;
+#X text 440 29 7) The "tables" abstraction (salmon panel) requires
+the argument of loop memory time in samples. This sets the maximum
+duration for loops. Note if either "LOAD" or "RESTORE" is used to load
+a stereo sample or samples of a larger size \, all snapshot arrays
+and the two loop arrays will be resized accordingly.;
+#X text 10 54 2) Alternatively \, use "LOAD" to load a stereo file
+from disk. Note \, if the size of this file is larger than sample memory
+allocated in the "tables" abstraction (salmon coloured panel \, see
+help 7.) \, all sample and snapshot arrays will be resized accordingly.
+Note that like "RECORD" \, "LOAD" may be used more than once in a session
+\, however if the file is larger than the memory allocated in the "tables"
+abstraction \, all snapshots will be lost.;
+#X text 10 194 3) Use the "OVERLAY" toggle to create an overlay on
+active loop. Turn toggle on before the end of the current loop. The
+recording of the overlay will commence at the start of the loop. If
+the OVERLAY toggle is left on \, a new overlay will be recorded on
+each cycle. When input is in mono and if the randomise button is selected
+\, each overlay is panned between left and right channels at random
+\, the degree to which \, is determined by the "% random stereo speparation"
+value. Note \, that this percentage can be greater than 100% if a higher
+probability of hard-left or hard-right panning is desired on each overlay.
+Alternatively \, a specific panning for each overlay may be selected
+with the slider.;
+#X text 10 -165 1) Initially \, use "RECORD" toggle to record a loop
+that will serve as a master for subsequent overlays. The loop length
+is determined by the expired time when the toggle is switched off.
+If the "randomise" toggle is selected in the blue "MONO INPUT PANNING"
+panel \, this loop will be panned to the central position with subsequent
+overlays panned randomly between the left and right channel. A specific
+pan value may be selected with the slider. Adjust "INPUT GAIN" if necessary.
+Note that RECORD can be used more than once in a session \, with any
+stored snapshots retained. The "STEREO INPUT" toggle selects stereo
+rather than mono input. When stereo input is selected the "MONO INPUT
+PANNING" module is disabled.;
+#X text 440 138 8) Project may be saved or restored using the dark
+grey PROJECT DATA panel. The path and project name \, eg. /tmp/test
+\, must be entered manually as an argument to the "dataStore" abstraction.
+Note that the project is saved as two files in directory specified
+in the path: a multichannel wav file to store the audio arrays and
+a text file to store the loop durations. If the project is named test
+\, for example \, the files saved are test.wav and test.txt.;

@@ -1,0 +1,62 @@
+#N canvas 113 59 945 679 12;
+#X text 40 -50 1) Inicialmente \, use a interruptor "RECORD" para gravar
+um loop que servirá como base para sobreposições subsequentes. O
+comprimento do loop é determinado pelo tempo expirado quando a interruptor
+é desligada. Se a interruptor "randomizar" for selecionada no painel
+azul "BALANÇO DE ENTRADA MONO" \, este loop será posicionado na posição
+central entre as caixas com sobreposições subsequentes posicionados
+aleatoriamente entre o canal esquerdo e direito. Um valor de balanço
+específico pode ser selecionado com o controle deslizante. Ajuste
+"GANHO DE ENTRADA" se necessário. Observe que GRAVAR pode ser usado
+mais de uma vez em uma sessão \, com quaisquer "snapshots" armazenados
+preservados. Alternativamente \, "STEREO INPUT" seleciona a entrada
+estéreo em vez de mono. Quando a entrada estéreo é selecionada \,
+o módulo "BALANÇO DE ENTRADA MONO" é desabilitado.;
+#X text 40 210 2) O botão "LOAD" também pode ser usado para produzir
+um loop de base e facilita a importação de um arquivo estéreo do
+disco. Observe que \, se o tamanho deste arquivo for maior que a memória
+de amostra alocada na abstração "tables" (painel de cor salmão \,
+consulte a ajuda 7.) \, toda a memória dos snapshots serão redimensionadas
+de acordo. Note que assim como "RECORD" \, "LOAD" pode ser usado mais
+de uma vez em uma sessão \, porém se o arquivo for maior que a memória
+alocada na abstração "tables" \, todos os snapshots serão perdidos.
+;
+#X text 40 376 3) Use o interruptor "OVERLAY" para criar uma sobreposição
+no loop ativo. Seleciona o interruptor antes do final do loop atual.
+A gravação da sobreposição começará no início do loop. Se o
+interruptor OVERLAY for deixado ligado \, uma nova sobreposição será
+gravada em cada ciclo. Quando a entrada está em mono e se o interruptor
+"randomize" estiver selecionado no painel azul \, cada sobreposição
+é posicionada aleatoriamente entre os canais esquerdo e direito \,
+o grau em que é determinado pelo valor "% separação estereofônica
+aleatória". Observe que essa porcentagem pode ser maior que 100% se
+uma maior probabilidade de um posicionamento ao esquerdo extremo ou
+direito extremo for desejada em cada sobreposição. Alternativamente
+\, um posicionamento estereofônico específico para cada sobreposição
+pode ser selecionada com o controle deslizante.;
+#X text 470 -50 4) Os botões "PARAR" e "REINICIAR" param e reiniciam
+o loop. O mesmo painel contém um controle "VOLUME" para o controlar
+volume de reprodução \, bem como botões para "APAGAR LOOP" e "APAGAR
+SNAPSHOTS" (veja abaixo).;
+#X text 470 20 5) Snapshots do loop atual podem ser feitos com "SALVAR
+SNAPSHOT" e recuperados com "LEMBRAR SNAPSHOT". Quando o interruptor
+"WAIT" é selecionada \, a reprodução de um snapshot selecionado
+ocorrerá no final do ciclo anterior.;
+#X text 470 99 6) O painel amarelo tem controles para gravar a corrente
+de áudio para um arquivo. Não se esqueça "PARAR DE GRAVAR" quando
+terminar!;
+#X text 470 164 7) A abstração "tables" (painel salmão) requer o
+argumento de tempo de loop em amostras (ex. se o taxa de amostragem
+está 48kHz \, o valor de 480000 representa 10 segundos). Isso define
+a duração máxima dos loops. Observe que se o botão "LOAD" ou "RESTORE"
+foram usados para carregar arquivos amostras de tamanho maior \, a
+memória para todos os loops será redimensionada de acordo.;
+#X text 470 290 8) O projeto pode ser salvo ou restaurado usando o
+painel "DADOS DO PROJETO" em cinza escuro. O caminho e o nome do projeto
+\, por exemplo. /tmp/teste \, deve ser inserido manualmente como um
+argumento na abstração "dataStore". Observe que o projeto é salvo
+como dois arquivos no diretório especificado no caminho: um arquivo
+wav multicanal para armazenar os "arrays" de áudio e um arquivo de
+texto para armazenar as durações dos loops. Se o projeto se chama
+teste \, por exemplo \, os arquivos salvos são test.wav e test.txt.
+;
