@@ -1,32 +1,32 @@
 #N canvas 318 91 658 589 10;
-#X obj 213 69 cnv 15 182 375 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
-#X obj 214 455 cnv 15 179 92 empty empty PROJECT\ DATA 19 12 0 10 #888181
+#X obj 233 101 cnv 15 162 348 empty empty empty 20 12 0 14 #e0e0e0
+#404040 0;
+#X obj 233 455 cnv 15 161 93 empty empty PROJECT\ DATA 19 12 0 10 #888181
 #000000 0;
 #X obj 401 490 cnv 15 245 57 empty empty empty 20 12 0 14 #a75cac #404040
 0;
-#X obj 0 413 cnv 15 206 135 empty empty empty 17 16 0 10 #93ee2f #404040
+#X obj 0 413 cnv 15 226 135 empty empty empty 17 16 0 10 #93ee2f #404040
 0;
 #X obj 402 406 cnv 15 246 70 empty empty LOOP\ MEMORY\ IN\ SAMPLES
 20 9 0 10 #f66943 #000000 0;
-#X obj 0 246 cnv 15 206 154 empty inpan MONO\ INPUT\ PANNING 5 16 0
-10 #97c1e7 #000000 0;
-#X obj 0 10 cnv 15 207 229 empty empty empty 20 12 0 10 #e8d4e4 #404040
+#X obj 0 246 cnv 15 225 154 empty inpan BALANÇA\ DE\ ENTRADA\ MONOFÔNICA
+5 16 0 10 #97c1e7 #000000 0;
+#X obj 0 10 cnv 15 226 229 empty empty empty 20 12 0 10 #e8d4e4 #404040
 0;
-#X obj 214 10 cnv 15 182 48 empty empty empty 20 12 0 14 #80ffff #404040
+#X obj 233 10 cnv 15 163 84 empty empty empty 20 12 0 14 #80ffff #404040
 0;
 #X obj 403 219 cnv 15 246 174 empty empty empty 20 12 0 14 #faff00
 #404040 0;
 #X obj 403 10 cnv 15 246 200 empty empty empty 20 12 0 14 #80ff80 #404040
 0;
-#X obj 222 29 tgl 15 0 empty empty RECORD 20 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 253 20 tgl 15 0 empty rec GRAVAR 20 7 0 10 #fcfcfc #000000 #000000
+0 1;
 #X obj 421 50 bng 15 250 50 0 empty empty REPLAY 25 7 0 10 #fcfcfc
 #000000 #000000;
 #X msg 420 17 0;
 #X obj 423 170 hsl 128 15 0 1 0 1 empty empty VOLUME -2 -8 0 10 #fcfcfc
 #000000 #000000 9150 1;
-#X obj 333 30 tgl 15 0 empty empty OVERLAY 17 7 0 10 #fcfcfc #000000
+#X obj 333 70 tgl 15 0 empty overlay OVERLAY 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X msg 427 317 start;
 #X msg 425 347 stop;
@@ -72,8 +72,8 @@
 #X connect 17 0 9 0;
 #X connect 17 0 6 0;
 #X restore 14 67 pd inputmodule;
-#X obj 14 31 hsl 128 15 0 10 0 1 empty infade INPUT\ GAIN 0 -8 0 10
-#fcfcfc #000000 #000000 7850 1;
+#X obj 14 31 hsl 128 15 0 10 0 1 empty infade GANHO\ DE\ ENTRADA 0
+-8 0 10 #fcfcfc #000000 #000000 7850 1;
 #X obj 14 97 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
 #N canvas 224 246 1057 732 sampler 0;
 #X obj 564 189 sel 1 0;
@@ -483,8 +483,8 @@
 #X connect 93 0 94 0;
 #X connect 94 1 83 0;
 #X connect 95 0 94 1;
-#X restore 229 205 pd sampler;
-#X obj 313 229 bng 15 250 50 0 empty empty loop\ start 20 4 0 10 #fcfcfc
+#X restore 255 210 pd sampler;
+#X obj 315 240 bng 15 250 50 0 empty empty loop\ start 20 4 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 827 127 450 325 diskrecord 0;
 #X obj 93 125 writesf~ 2;
@@ -494,16 +494,16 @@
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 1;
-#X restore 240 300 pd diskrecord;
+#X restore 255 320 pd diskrecord;
 #X text 449 17 STOP;
-#X obj 9 282 loadbang;
-#X msg 10 307 100;
-#X obj 9 332 s pan;
-#X floatatom 40 307 5 0 0 0 - - -, f 5;
-#X obj 17 437 hradio 15 0 0 10 store empty STORE\ SNAPSHOT 0 -8 0 10
-#d52424 #000000 #000000 0;
-#X obj 18 484 hradio 15 0 0 10 recall empty RECALL\ SNAPSHOT 0 -8 0
-10 #39d61b #000000 #000000 0;
+#X obj 3 282 loadbang;
+#X msg 4 307 100;
+#X obj 3 332 s pan;
+#X floatatom 30 307 5 0 0 0 - - -, f 5;
+#X obj 17 437 hradio 15 0 0 10 store snapin SALVAR\ SNAPSHOT 0 -8 0
+10 #d52424 #000000 #000000 0;
+#X obj 18 484 hradio 15 0 0 10 recall snapout LEMBRAR\ SNAPSHOT 0 -8
+0 10 #39d61b #000000 #000000 0;
 #N canvas 0 0 450 300 CLEAR_LOOP 0;
 #X msg 80 70 \; sampler_L const 0 \; sampler_R const 0;
 #X obj 80 20 inlet;
@@ -625,23 +625,20 @@ a text file to store the loop durations. If the project is named test
 #000000 #000000;
 #X obj 18 518 tgl 15 1 wait empty wait 17 7 0 10 #fcfcfc #000000 #000000
 1 1;
-#X obj 285 30 bng 15 250 50 0 empty empty LOAD 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 292 46 bng 15 250 50 0 empty load CARREGAR 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 432 433 tables 480000;
 #X obj 236 517 dataStore /tmp/test;
-#X obj 10 375 tgl 15 1 randomiseout randomisein randomise 17 7 0 10
+#X obj 10 375 tgl 15 1 randomiseout randomisein randomizar 17 7 0 10
 #fcfcfc #000000 #000000 1 1;
-#X obj 110 380 hsl 85 14 -45 45 0 1 manualpan empty MANUAL\ PAN 8 -8
-0 10 #fcfcfc #000000 #000000 3700 1;
-#X obj 112 176 tgl 15 1 stereo ster STEREO\ INPUT 17 7 0 10 #fcfcfc
+#X obj 110 380 hsl 85 14 -45 45 0 1 manualpan manpan BALANÇA\ MANUAL
+0 -8 0 10 #fcfcfc #000000 #000000 3700 1;
+#X obj 112 176 tgl 15 1 stereo ster ENTRADA\ ESTEREO 17 7 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 60 97 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
-#X text 77 301 % random stereo;
-#X text 76 314 overlay separation;
-#X obj 230 370 bng 15 250 50 0 en empty English 17 7 0 10 #fcfcfc #000000
+#X obj 251 383 bng 15 250 50 0 en empty English 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 300 250 print;
-#N canvas 872 177 781 335 language 1;
+#N canvas 759 103 789 588 language 1;
 #X obj 20 75 l2s;
 #X msg 150 40 GANHO DE ENTRADA;
 #X msg 20 40 INPUT GAIN;
@@ -666,6 +663,50 @@ a text file to store the loop durations. If the project is named test
 #X obj 280 360 r pt;
 #X msg 160 390 randomise;
 #X msg 280 390 randomizar;
+#X obj 3 521 l2s;
+#X obj 10 450 r en;
+#X obj 123 456 r pt;
+#X msg 33 536 \; manpan label \$1;
+#X msg 123 486 BALANÇA MANUAL;
+#X msg 3 486 MANUAL PAN;
+#X obj 220 555 l2s;
+#X obj 227 484 r en;
+#X obj 320 535 l2s;
+#X obj 510 470 r pt;
+#X msg 350 550 \; percent2 label \$1;
+#X msg 250 570 \; percent1 label \$1;
+#X obj 500 565 l2s;
+#X obj 600 545 l2s;
+#X msg 630 560 \; percent2 label \$1;
+#X msg 530 580 \; percent1 label \$1;
+#X msg 500 530 % separação estereofônica;
+#X msg 600 510 aleatória;
+#X msg 220 520 % random stereo;
+#X msg 320 500 separation;
+#X obj -10 655 l2s;
+#X obj -3 584 r en;
+#X obj 110 590 r pt;
+#X msg -10 620 STORE SNAPSHOT;
+#X msg 110 620 SALVAR SNAPSHOT;
+#X msg 20 670 \; snapin label \$1;
+#X obj 230 685 l2s;
+#X obj 237 614 r en;
+#X obj 350 620 r pt;
+#X msg 230 650 RECALL SNAPSHOT;
+#X msg 260 700 \; snapout label \$1;
+#X msg 350 650 LEMBRAR SNAPSHOT;
+#X obj 320 255 l2s;
+#X obj 327 184 r en;
+#X msg 350 270 \; rec label \$1;
+#X msg 320 220 RECORD;
+#X msg 390 220 GRAVAR;
+#X obj 390 180 r pt;
+#X obj 370 375 l2s;
+#X obj 377 304 r en;
+#X obj 440 300 r pt;
+#X msg 400 390 \; load label \$1;
+#X msg 370 340 LOAD;
+#X msg 440 340 CARREGAR;
 #X connect 0 0 5 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -686,9 +727,50 @@ a text file to store the loop durations. If the project is named test
 #X connect 21 0 23 0;
 #X connect 22 0 19 0;
 #X connect 23 0 19 0;
-#X restore 240 410 pd language;
-#X obj 300 370 bng 15 250 50 0 pt empty Português 17 7 0 10 #fcfcfc
+#X connect 24 0 27 0;
+#X connect 25 0 29 0;
+#X connect 26 0 28 0;
+#X connect 28 0 24 0;
+#X connect 29 0 24 0;
+#X connect 30 0 35 0;
+#X connect 31 0 43 0;
+#X connect 31 0 42 0;
+#X connect 32 0 34 0;
+#X connect 33 0 40 0;
+#X connect 33 0 41 0;
+#X connect 36 0 39 0;
+#X connect 37 0 38 0;
+#X connect 40 0 36 0;
+#X connect 41 0 37 0;
+#X connect 42 0 30 0;
+#X connect 43 0 32 0;
+#X connect 44 0 49 0;
+#X connect 45 0 47 0;
+#X connect 46 0 48 0;
+#X connect 47 0 44 0;
+#X connect 48 0 44 0;
+#X connect 50 0 54 0;
+#X connect 51 0 53 0;
+#X connect 52 0 55 0;
+#X connect 53 0 50 0;
+#X connect 55 0 50 0;
+#X connect 56 0 58 0;
+#X connect 57 0 59 0;
+#X connect 59 0 56 0;
+#X connect 60 0 56 0;
+#X connect 61 0 60 0;
+#X connect 62 0 65 0;
+#X connect 63 0 66 0;
+#X connect 64 0 67 0;
+#X connect 66 0 62 0;
+#X connect 67 0 62 0;
+#X restore 270 410 pd language;
+#X obj 321 383 bng 15 250 50 0 pt empty Português 17 7 0 10 #fcfcfc
 #000000 #000000;
+#X obj 43 328 cnv 15 143 25 empty percent1 %\ separação\ estereofônica
+3 7 0 10 #97c1e7 #404040 0;
+#X obj 56 348 cnv 15 98 9 empty percent2 aleatória -10 -1 0 10 #97c1e7
+#404040 0;
 #X connect 10 0 23 2;
 #X connect 11 0 23 6;
 #X connect 12 0 23 5;
