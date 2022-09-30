@@ -1,4 +1,4 @@
-#N canvas 284 56 945 704 12;
+#N canvas 289 56 945 682 12;
 #X text 40 -50 1) Inicialmente \, use a interruptor "RECORD" para gravar
 um loop que servirá como base para sobreposições subsequentes. O
 comprimento do loop é determinado pelo tempo expirado quando a interruptor
@@ -42,9 +42,6 @@ SNAPSHOTS" (veja abaixo).;
 SNAPSHOT" e recuperados com "LEMBRAR SNAPSHOT". Quando o interruptor
 "WAIT" é selecionada \, a reprodução de um snapshot selecionado
 ocorrerá no final do ciclo anterior.;
-#X text 470 99 6) O painel amarelo tem controles para gravar a corrente
-de áudio para um arquivo. Não se esqueça "PARAR DE GRAVAR" quando
-terminar!;
 #X text 470 290 8) O projeto pode ser salvo ou restaurado usando o
 painel "DADOS DO PROJETO" em cinza escuro. O caminho e o nome do projeto
 \, por exemplo. /tmp/teste \, deve ser inserido manualmente como um
@@ -61,3 +58,6 @@ a duração máxima dos loops. Observe que se o botão "CARREGAR" ou
 "RESGATAR" foram usados para carregar arquivos amostras de tamanho
 maior \, a memória para todos os loops será redimensionada de acordo.
 ;
+#X text 470 99 6) No painel amarelo há controles para gravar a corrente
+de áudio para um arquivo. Não se esqueça "PARAR DE GRAVAR" quando
+terminar!;
