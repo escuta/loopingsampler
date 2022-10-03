@@ -28,7 +28,7 @@
 #X obj 415 106 bng 15 250 50 0 empty replay REPLAY\ LOOPS 17 7 0 10
 -262144 -1 -1;
 #X msg 414 73 0;
-#X obj 417 226 hsl 128 15 0 4 0 0 empty vol VOLUME -2 -8 0 10 -262144
+#X obj 417 226 hsl 128 15 0 4 0 1 empty vol VOLUME -2 -8 0 10 -262144
 -1 -1 6800 1;
 #X obj 316 126 tgl 15 0 empty overlay OVERLAY 17 7 0 10 -262144 -1
 -1 0 1;
@@ -76,7 +76,7 @@
 #X connect 17 0 9 0;
 #X connect 17 0 6 0;
 #X restore 8 123 pd inputmodule;
-#X obj 8 87 hsl 128 15 0 5 0 0 empty infade INPUT\ GAIN -2 -8 0 10
+#X obj 8 87 hsl 128 15 0 5 0 1 empty infade INPUT\ GAIN -2 -8 0 10
 -262144 -1 -1 4600 1;
 #X obj 8 160 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #N canvas 224 246 1057 732 sampler 0;
@@ -535,16 +535,16 @@
 -1;
 #X obj 313 591 bng 15 250 50 0 empty restore RESTORE 17 7 0 10 -262144
 -1 -1;
-#X obj 12 574 tgl 15 0 wait empty wait 17 7 0 10 -262144 -1 -1 1 1
+#X obj 12 574 tgl 15 1 wait empty wait 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 275 102 bng 15 250 50 0 empty load LOAD 17 7 0 10 -262144 -1
 -1;
 #X obj 426 489 tables 480000;
-#X obj 4 431 tgl 15 0 randomiseout randomisein randomise 17 7 0 10
+#X obj 4 431 tgl 15 1 randomiseout randomisein randomise 17 7 0 10
 -262144 -1 -1 1 1;
-#X obj 104 436 hsl 100 15 -45 45 0 0 manualpan manpan MANUAL\ PAN -2
+#X obj 104 436 hsl 100 15 -45 45 0 1 manualpan manpan MANUAL\ PAN -2
 -8 0 10 -262144 -1 -1 4400 1;
-#X obj 106 270 tgl 15 0 stereo ster STEREO\ INPUT 17 7 0 10 -262144
+#X obj 106 270 tgl 15 1 stereo ster STEREO\ INPUT 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 54 160 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 490 13 bng 15 250 50 0 empty empty English 17 7 0 10 -262144
