@@ -1,4 +1,4 @@
-#N canvas 108 60 945 570 12;
+#N canvas 113 61 945 570 12;
 #X text 440 -165 4) "STOP" and "REPLAY" stop and restart looping. The
 same panel contains a "VOLUME" control for playback volume as well
 as buttons to "CLEAR LOOP" and "CLEAR SNAPSHOTS" (see below).;
@@ -44,10 +44,10 @@ rather than mono input. When stereo input is selected the "MONO INPUT
 PANNING" module is disabled.;
 #X text 440 140 8) Project may be saved or restored using the dark
 grey PROJECT DATA panel. The path and project name \, eg. /tmp/test
-\, must be entered manually as an argument to the "dataStore" abstraction.
-For Windows \, use forward slashes in path and again \, with no quotes
-\, eg. C:/Users/youruser/Desktop/test. Note that the project is saved
-as two files in directory specified in the path: a multichannel wav
-file to store the audio arrays and a text file to store the loop durations.
-If the project is named test \, for example \, the files saved are
-test.wav and test.txt.;
+\, must be entered manually as an argument to the "dataStore" abstraction
+using no quotes. For Windows \, use forward slashes and not backslashes
+in path with no quotes \, eg. C:/Users/youruser/Desktop/test. Note
+that the project is saved as two files in directory specified in the
+path: a multichannel wav file to store the audio arrays and a text
+file to store the loop durations. If the project is named test \, for
+example \, the files saved are test.wav and test.txt.;
