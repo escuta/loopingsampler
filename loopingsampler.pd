@@ -1,41 +1,41 @@
 #N canvas 635 59 726 674 10;
-#X obj -6 610 cnv 15 646 49 empty grey empty 19 12 0 10 #888080 #000000
+#X obj -6 610 cnv 15 646 49 empty grey empty 19 12 0 10 -141345 -1
 0;
-#X obj 470 2 cnv 15 170 60 empty empty empty 20 12 0 14 #f874ec #404040
+#X obj 470 2 cnv 15 170 60 empty empty empty 20 12 0 14 -255868 -66577
 0;
-#X obj 227 157 cnv 15 162 371 empty empty empty 20 12 0 14 #e0e0e0
-#404040 0;
-#X obj 227 536 cnv 15 161 93 empty grey PROJECT\ DATA 19 12 0 10 #888080
-#000000 0;
-#X obj 395 546 cnv 15 245 57 empty empty empty 20 12 0 14 #fc4804 #404040
+#X obj 227 157 cnv 15 162 371 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 227 536 cnv 15 161 93 empty grey PROJECT\ DATA 19 12 0 10 -141345
+-1 0;
+#X obj 395 546 cnv 15 245 57 empty empty empty 20 12 0 14 -259202 -66577
 0;
-#X obj -10 470 cnv 15 226 135 empty empty empty 17 16 0 10 #90ec2c
-#404040 0;
+#X obj -10 470 cnv 15 226 135 empty empty empty 17 16 0 10 -151244
+-66577 0;
 #X obj 396 462 cnv 15 246 70 empty tablesin LOOP\ MEMORY\ IN\ SAMPLES
-20 9 0 10 #f46840 #000000 0;
+20 9 0 10 -251537 -1 0;
 #X obj -6 302 cnv 15 225 154 empty inpan MONO\ INPUT\ PANNING 5 16
-0 10 #94c0e4 #000000 0;
-#X obj -6 66 cnv 15 226 229 empty empty empty 20 12 0 10 #e8d4e4 #404040
+0 10 -154682 -1 0;
+#X obj -6 66 cnv 15 226 229 empty empty empty 20 12 0 10 -241018 -66577
 0;
-#X obj 227 66 cnv 15 163 84 empty empty empty 20 12 0 14 #80fcfc #404040
+#X obj 227 66 cnv 15 163 84 empty empty empty 20 12 0 14 -135168 -66577
 0;
-#X obj 397 275 cnv 15 246 174 empty empty empty 20 12 0 14 #f8fc00
-#404040 0;
-#X obj 397 66 cnv 15 246 200 empty empty empty 20 12 0 14 #80fc80 #404040
+#X obj 397 275 cnv 15 246 174 empty empty empty 20 12 0 14 -257985
+-66577 0;
+#X obj 397 66 cnv 15 246 200 empty empty empty 20 12 0 14 -135137 -66577
 0;
-#X obj 236 76 tgl 15 0 empty rec RECORD 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
+#X obj 236 76 tgl 15 0 empty rec RECORD 17 7 0 10 -262144 -1 -1 0 1
+;
 #X obj 415 106 bng 15 250 50 0 empty replay REPLAY\ LOOPS 17 7 0 10
-#fcfcfc #000000 #000000;
+-262144 -1 -1;
 #X msg 414 73 0;
-#X obj 417 226 hsl 128 15 0 4 0 0 empty vol VOLUME -2 -8 0 10 #fcfcfc
-#000000 #000000 6800 1;
-#X obj 316 126 tgl 15 0 empty overlay OVERLAY 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 417 226 hsl 128 15 0 4 0 0 empty vol VOLUME -2 -8 0 10 -262144
+-1 -1 6800 1;
+#X obj 316 126 tgl 15 0 empty overlay OVERLAY 17 7 0 10 -262144 -1
+-1 0 1;
 #X msg 421 373 start;
 #X msg 419 403 stop;
 #X obj 421 293 bng 15 250 50 0 empty create CREATE\ SOUND\ FILE 17
-7 0 10 #fcfcfc #000000 #000000;
+7 0 10 -262144 -1 -1;
 #X msg 421 343 open \$1;
 #X obj 421 323 savepanel;
 #N canvas 765 220 450 425 inputmodule 0;
@@ -77,8 +77,8 @@
 #X connect 17 0 6 0;
 #X restore 8 123 pd inputmodule;
 #X obj 8 87 hsl 128 15 0 5 0 0 empty infade INPUT\ GAIN -2 -8 0 10
-#fcfcfc #000000 #000000 4600 1;
-#X obj 8 160 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0;
+-262144 -1 -1 4600 1;
+#X obj 8 160 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #N canvas 224 246 1057 732 sampler 0;
 #X obj 564 189 sel 1 0;
 #X obj 530 230 timer;
@@ -94,8 +94,8 @@
 #X floatatom 500 370 5 0 0 0 - - -, f 5;
 #X floatatom 590 250 5 0 0 0 - - -, f 5;
 #X obj 640 247 metro 500;
-#X obj 630 290 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 630 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 620 170 0;
 #X msg 670 320 1;
 #X obj 590 390 * 48;
@@ -106,8 +106,8 @@
 #X obj 665 -13 inlet;
 #X obj 860 -20 inlet;
 #X obj 720 207 spigot;
-#X obj 724 238 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 724 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 725 260 1;
 #X obj 780 207 sel 0;
 #X obj 524 495 *~;
@@ -212,14 +212,14 @@
 #N canvas 68 262 658 441 loadloop 0;
 #X obj 87 42 inlet;
 #X obj 92 77 openpanel;
-#X obj 149 35 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 149 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X obj 130 360 soundfiler;
 #X obj 140 106 wavinfo;
 #X floatatom 140 139 13 0 0 0 - - -, f 13;
 #X floatatom 190 225 10 0 0 0 - - -, f 10;
-#X obj 210 161 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 210 161 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X floatatom 90 250 5 0 0 0 - - -, f 5;
 #X obj 150 209 >;
 #X obj 140 250 sel 1 0;
@@ -282,16 +282,16 @@
 #X restore -50 330 pd resize_snapshots;
 #X obj 190 200 v defarraysize;
 #X obj -20 300 i;
-#X obj -20 280 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj -20 280 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X floatatom -90 300 9 0 0 0 - - -, f 9;
 #X obj 140 163 t f f f b;
 #X obj 15 51 samplerate~;
 #X obj 15 80 / 1000;
 #X floatatom 15 109 5 0 0 0 - - -, f 5;
 #X obj 16 19 loadbang;
-#X obj -20 30 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj -20 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 1 0;
 #X connect 1 0 16 0;
 #X connect 2 0 1 0;
@@ -341,12 +341,12 @@
 #X obj 815 340 / 1000;
 #X floatatom 815 369 5 0 0 0 - - -, f 5;
 #X obj 816 279 loadbang;
-#X obj 780 290 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 780 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 360 100 spigot;
 #X obj 190 117 r manualpan;
-#X obj 190 142 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 190 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X msg 190 165 0;
 #X obj 190 190 s randomisein;
 #X floatatom 320 40 5 0 0 0 - - -, f 5;
@@ -357,12 +357,12 @@
 #X obj 150 100 s randomisein;
 #X obj 180 35 del 10;
 #X floatatom 150 150 5 0 0 0 - - -, f 5;
-#X obj 310 130 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 310 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 370 300 tabwrite~ sampler_L;
 #X obj 390 250 tabwrite~ sampler_R;
-#X obj 340 140 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 340 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X floatatom 290 270 5 0 0 0 - - -, f 5;
 #X floatatom 320 100 5 0 0 0 - - -, f 5;
 #X msg 400 80 1;
@@ -488,8 +488,8 @@
 #X connect 94 1 83 0;
 #X connect 95 0 94 1;
 #X restore 240 300 pd sampler;
-#X obj 240 370 bng 15 250 50 0 empty cycle cycle\ start 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 240 370 bng 15 250 50 0 empty cycle cycle\ start 17 7 0 10 -262144
+-1 -1;
 #N canvas 827 127 450 325 diskrecord 0;
 #X obj 93 125 writesf~ 2;
 #X obj 20 40 inlet~;
@@ -504,13 +504,13 @@
 #X obj -3 388 s pan;
 #X floatatom 24 363 5 0 0 0 - - -, f 5;
 #X obj 11 493 hradio 15 0 0 8 store snapin STORE\ SNAPSHOT 0 -8 0 10
-#fcfcfc #000000 #000000 0;
+-262144 -1 -1 0;
 #X obj 12 540 hradio 15 0 0 8 recall snapout RECALL\ SNAPSHOT 0 -8
-0 10 #fcfcfc #000000 #000000 1;
+0 10 -262144 -1 -1 1;
 #X obj 416 151 bng 15 250 50 0 empty clearloop CLEAR\ LOOP 17 7 0 10
-#fcfcfc #000000 #000000;
+-262144 -1 -1;
 #X obj 511 152 bng 15 250 50 0 empty clearsnapshots CLEAR\ SNAPSHOTS
-17 7 0 10 #fcfcfc #000000 #000000;
+17 7 0 10 -262144 -1 -1;
 #X text 14 509 1;
 #X text 29 509 2;
 #X text 44 509 3;
@@ -531,25 +531,24 @@
 #X text 120 557 8;
 #X text 134 557 9;
 #X text 146 557 10;
-#X obj 232 591 bng 15 250 50 0 empty save SAVE 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 313 591 bng 15 250 50 0 empty restore RESTORE 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 12 574 tgl 15 0 wait empty wait 17 7 0 10 #fcfcfc #000000 #000000
-1 1;
-#X obj 275 102 bng 15 250 50 0 empty load LOAD 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 232 591 bng 15 250 50 0 empty save SAVE 17 7 0 10 -262144 -1
+-1;
+#X obj 313 591 bng 15 250 50 0 empty restore RESTORE 17 7 0 10 -262144
+-1 -1;
+#X obj 12 574 tgl 15 0 wait empty wait 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 275 102 bng 15 250 50 0 empty load LOAD 17 7 0 10 -262144 -1
+-1;
 #X obj 426 489 tables 480000;
 #X obj 4 431 tgl 15 0 randomiseout randomisein randomise 17 7 0 10
-#fcfcfc #000000 #000000 1 1;
+-262144 -1 -1 1 1;
 #X obj 104 436 hsl 100 15 -45 45 0 0 manualpan manpan MANUAL\ PAN -2
--8 0 10 #fcfcfc #000000 #000000 4400 1;
-#X obj 106 270 tgl 15 0 stereo ster STEREO\ INPUT 17 7 0 10 #fcfcfc
-#000000 #000000 1 1;
-#X obj 54 160 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
-;
-#X obj 490 13 bng 15 250 50 0 empty empty English 17 7 0 10 #fcfcfc
-#000000 #000000;
+-8 0 10 -262144 -1 -1 4400 1;
+#X obj 106 270 tgl 15 0 stereo ster STEREO\ INPUT 17 7 0 10 -262144
+-1 -1 1 1;
+#X obj 54 160 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 490 13 bng 15 250 50 0 empty empty English 17 7 0 10 -262144
+-1 -1;
 #N canvas 396 90 948 584 language 0;
 #X obj -390 65 l2s;
 #X msg -260 30 GANHO DE ENTRADA;
@@ -827,14 +826,14 @@
 #X connect 146 0 138 0;
 #X connect 147 0 138 0;
 #X restore 490 40 pd language;
-#X obj 560 13 bng 15 250 50 0 empty empty Português 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 560 13 bng 15 250 50 0 empty empty Português 17 7 0 10 -262144
+-1 -1;
 #X obj 37 384 cnv 15 143 25 empty percent1 %\ random\ stereo 3 7 0
-10 #94c0e4 #404040 0;
-#X obj 50 404 cnv 15 98 9 empty percent2 separation -10 -1 0 10 #94c0e4
-#404040 0;
-#X obj 459 80 cnv 15 98 9 empty stop STOP\ LOOPS -10 -1 0 10 #80fc80
-#000000 0;
+10 -154682 -66577 0;
+#X obj 50 404 cnv 15 98 9 empty percent2 separation -10 -1 0 10 -154682
+-66577 0;
+#X obj 459 80 cnv 15 98 9 empty stop STOP\ LOOPS -10 -1 0 10 -135137
+-1 0;
 #N canvas 0 0 450 300 messages 0;
 #X msg 80 70 \; sampler_L const 0 \; sampler_R const 0;
 #X obj 80 20 inlet;
@@ -873,14 +872,12 @@ snapL3 const 0 \; snapL4 const 0 \; snapL5 const 0 \; snapL6 const
 #X connect 2 0 12 0;
 #X restore 511 173 pd messages;
 #X obj 472 381 cnv 15 98 9 empty rec2disk RECORD\ TO\ DISK -10 -1 0
-10 #f8fc00 #000000 0;
+10 -257985 -1 0;
 #X obj 472 410 cnv 15 98 9 empty stoprec STOP\ RECORDING -10 -1 0 10
-#f8fc00 #000000 0;
+-257985 -1 0;
 #X obj 470 567 HELP;
 #X obj 517 567 AJUDA;
 #X obj 232 623 dataStore ~/tmp/lester;
-#X msg 50 15 compatibility 0.47;
-#X obj 50 40 send pd;
 #X connect 12 0 25 2;
 #X connect 13 0 25 6;
 #X connect 14 0 25 5;
@@ -909,4 +906,3 @@ snapL3 const 0 \; snapL4 const 0 \; snapL5 const 0 \; snapL6 const
 #X connect 59 0 25 3;
 #X connect 65 0 66 0;
 #X connect 67 0 66 1;
-#X connect 78 0 79 0;
