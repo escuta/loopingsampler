@@ -1,4 +1,4 @@
-#N canvas 309 56 726 674 10;
+#N canvas 319 58 726 674 10;
 #X obj -6 610 cnv 15 646 49 empty grey PROJECT\ DATA 19 12 0 10 #888080
 #000000 0;
 #X obj 470 2 cnv 15 170 60 empty empty empty 20 12 0 14 #f874ec #404040
@@ -506,7 +506,7 @@
 #X obj 11 493 hradio 15 0 0 8 store snapin STORE\ SNAPSHOT 0 -8 0 10
 #fcfcfc #000000 #000000 0;
 #X obj 12 540 hradio 15 0 0 8 recall snapout RECALL\ SNAPSHOT 0 -8
-0 10 #fcfcfc #000000 #000000 3;
+0 10 #fcfcfc #000000 #000000 0;
 #X obj 416 151 bng 15 250 50 0 empty clearloop CLEAR\ LOOP 17 7 0 10
 #fcfcfc #000000 #000000;
 #X obj 511 152 bng 15 250 50 0 empty clearsnapshots CLEAR\ SNAPSHOTS
@@ -535,22 +535,22 @@
 #000000;
 #X obj 313 591 bng 15 250 50 0 empty restore RESTORE 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 12 574 tgl 15 1 wait empty wait 17 7 0 10 #fcfcfc #000000 #000000
+#X obj 12 576 tgl 15 1 wait waitin wait 17 7 0 10 #fcfcfc #000000 #000000
 1 1;
 #X obj 275 102 bng 15 250 50 0 empty load LOAD 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 426 489 tables 480000;
 #X obj 4 431 tgl 15 1 randomiseout randomisein randomise 17 7 0 10
 #fcfcfc #000000 #000000 1 1;
-#X obj 104 436 hsl 100 15 -45 45 0 1 manualpan manpan MANUAL\ PAN -2
--8 0 10 #fcfcfc #000000 #000000 4400 1;
+#X obj 91 436 hsl 114 15 -45 45 0 1 manualpan manpan MANUAL\ PAN -2
+-8 0 10 #fcfcfc #000000 #000000 5271 1;
 #X obj 106 270 tgl 15 1 stereo ster STEREO\ INPUT 17 7 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 54 160 vu 15 120 empty empty -1 -8 0 10 #404040 #000000 1 0
 ;
 #X obj 490 13 bng 15 250 50 0 empty empty English 17 7 0 10 #fcfcfc
 #000000 #000000;
-#N canvas 396 90 948 584 language 0;
+#N canvas 401 91 948 609 language 0;
 #X obj -390 65 l2s;
 #X msg -260 30 GANHO DE ENTRADA;
 #X msg -390 30 INPUT GAIN;
@@ -702,6 +702,12 @@
 #X msg 670 380 \; restore label \$1;
 #X msg 680 240 \; save label \$1;
 #X msg 610 100 \; tablesin label \$1;
+#X obj 240 755 l2s;
+#X obj 247 684 r en;
+#X obj 310 680 r pt;
+#X msg 240 720 wait;
+#X msg 330 730 esperar;
+#X msg 270 770 \; waitin label \$1;
 #X connect 0 0 5 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -826,6 +832,11 @@
 #X connect 145 0 141 0;
 #X connect 146 0 138 0;
 #X connect 147 0 138 0;
+#X connect 151 0 156 0;
+#X connect 152 0 154 0;
+#X connect 153 0 155 0;
+#X connect 154 0 151 0;
+#X connect 155 0 151 0;
 #X restore 490 40 pd language;
 #X obj 560 13 bng 15 250 50 0 empty empty Português 17 7 0 10 #fcfcfc
 #000000 #000000;
