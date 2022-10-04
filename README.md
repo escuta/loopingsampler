@@ -1,1 +1,1 @@
-Puredata looping sampler patch. Master patch is loopingsampler.pd. Requires purr-data/pd-l2ork. Tested in Purr-data/Pd-l2ork-2.17.0 and in Purr-data for Windows (version?). May have compatibility issues on earlier versions.
+Puredata looping sampler patch. Master patch is loopingsampler.pd. Requires purr-data/pd-l2ork. Tested in Purr-data/Pd-l2ork-2.17.0 on Linux and Windows. May have compatibility issues on earlier versions.
